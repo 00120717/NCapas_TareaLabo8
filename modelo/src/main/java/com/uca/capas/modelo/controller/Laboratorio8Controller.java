@@ -79,6 +79,7 @@ public class Laboratorio8Controller {
 	        ModelAndView mav = new ModelAndView();
 	        Integer resultado;
 	        resultado = clienteService.ejecutarProcJdbc(cliente, estado);
+	        mav.addObject("resultado",resultado);
 	        mav.setViewName("Laboratorio/resultado");
 	        return mav;
 	    }
